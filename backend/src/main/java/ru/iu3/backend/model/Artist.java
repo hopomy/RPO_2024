@@ -1,6 +1,6 @@
 package ru.iu3.backend.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "artists")

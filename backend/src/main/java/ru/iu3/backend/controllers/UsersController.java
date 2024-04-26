@@ -21,7 +21,7 @@ import ru.iu3.backend.model.Museum;
 import ru.iu3.backend.model.User;
 import ru.iu3.backend.repository.MuseumRepository;
 import ru.iu3.backend.repository.UserRepository;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 
 
 @RestController
