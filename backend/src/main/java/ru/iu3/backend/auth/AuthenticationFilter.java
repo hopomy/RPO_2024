@@ -1,4 +1,3 @@
-
 package ru.iu3.backend.auth;
 
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
@@ -26,7 +25,7 @@ public class AuthenticationFilter extends AbstractAuthenticationProcessingFilter
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest httpServletRequest,
-                                                HttpServletResponse httpServletResponse)
+            HttpServletResponse httpServletResponse)
             throws AuthenticationException, IOException, ServletException {
 
         Enumeration<String> headerNames = httpServletRequest.getHeaderNames();
@@ -41,8 +40,8 @@ public class AuthenticationFilter extends AbstractAuthenticationProcessingFilter
 
     @Override
     protected void successfulAuthentication(final HttpServletRequest request,
-                                            final HttpServletResponse response,
-                                            final FilterChain chain, final Authentication authResult)
+            final HttpServletResponse response,
+            final FilterChain chain, final Authentication authResult)
             throws IOException, ServletException {
         SecurityContextHolder.getContext().setAuthentication(authResult);
         chain.doFilter(request, response);
